@@ -9,7 +9,10 @@ var filesToCache = [
     '/styles/style.css',
     '/assets/images/dashboard.jpg',
     '/assets/images/notifications.jpg',
-    '/assets/images/workorder-held.jpg'
+    '/assets/images/workorder-held.jpg',
+    '/assets/images/dashboard.webp',
+    '/assets/images/notifications.webp',
+    '/assets/images/workorder-held.webp'
 ];  
     
 self.addEventListener('install', function(e) { 
