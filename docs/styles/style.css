@@ -261,7 +261,7 @@ section#portal img {
 
 .portal-img-hand {
     grid-area: hand;
-    background: url('/assets/images/workorder-held.png') center;
+    background: url('/website/assets/images/workorder-held.png') center;
     background-repeat: no-repeat;
     background-position: cover;
     border-radius: 15px;
@@ -269,7 +269,7 @@ section#portal img {
 
 .portal-img-table {
     grid-area: table;
-    background: url('/assets/images/notifications.png') center;
+    background: url('/website/assets/images/notifications.png') center;
     background-repeat: no-repeat;
     background-position: cover;
     border-radius: 15px;
@@ -277,7 +277,7 @@ section#portal img {
 
 .portal-img-laptop {
     grid-area: laptop;
-    background: url('/assets/images/dashboard.png') center;
+    background: url('/website/assets/images/dashboard.png') center;
     background-repeat: no-repeat;
     background-position: cover;
     border-radius: 15px;
