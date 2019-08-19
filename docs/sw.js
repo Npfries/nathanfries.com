@@ -1,9 +1,9 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 if (workbox) {
-  console.log(`Yay! Workbox is loaded 🎉`);
+  console.log(`Thanks for stopping in and looking around! I went ahead and installed this page using Workbox from Google. Take your time and check back in after a while, I am adding more projects.`);
 } else {
-  console.log(`Boo! Workbox didn't load 😬`);
+  console.log(`Boo! Workbox didn't load 😬. Anyways, thanks for stopping in and looking around!`);
 }
 
 workbox.routing.registerRoute(
