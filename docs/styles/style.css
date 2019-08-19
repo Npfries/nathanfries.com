@@ -159,7 +159,6 @@ label {
 
 section#portal {
     grid-area: portal;
-    background: linear-gradient(to top right, #3de093, #99F1E5)
 }
 
 header .float-right {
@@ -231,7 +230,7 @@ section#portal {
 
 .portal-text {
     grid-area: portal-text;
-    background-color: #FFF;
+    background: linear-gradient(to top right, rgb(230, 230, 230), rgb(248, 248, 248));
     border-radius: 25px;
     padding: 50px;
 }
