@@ -1,31 +1,40 @@
-var cacheName = 'pwa-cache'; 
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
+}
+
+workbox.routing.registerRoute(
+    /\.js$/,
+    new workbox.strategies.NetworkFirst()
+);
+
+workbox.routing.registerRoute(
+    // Cache CSS files.
+    /\.css$/,
+    // Use cache but update in the background.
+    new workbox.strategies.StaleWhileRevalidate({
+      // Use a custom cache name.
+      cacheName: 'css-cache',
+    })
+  );
   
-var filesToCache = [
-    '/',    
-    '/index.html',    
-    '/scripts/app.js',
-    '/styles/dispiro.css',
-    '/styles/normalize.css',
-    '/styles/style.css',
-    '/assets/images/dashboard.jpg',
-    '/assets/images/notifications.jpg',
-    '/assets/images/workorder-held.jpg',
-    '/assets/images/dashboard.webp',
-    '/assets/images/notifications.webp',
-    '/assets/images/workorder-held.webp'
-];  
-    
-self.addEventListener('install', function(e) { 
-    e.waitUntil(
-        caches.open(cacheName).then(function(cache) { 
-            return cache.addAll(filesToCache);   
-        })    
-    );  
-}); 
-    
-/* Serve cached content when offline */ 
-self.addEventListener('fetch', function(e) {  
-    e.respondWith(caches.match(e.request).then(function(response) {  
-        return response || fetch(e.request);
-    }));  
-});
+  workbox.routing.registerRoute(
+    // Cache image files.
+    /\.(?:png|jpg|jpeg|svg|gif)$/,
+    // Use the cache if it's available.
+    new workbox.strategies.CacheFirst({
+      // Use a custom cache name.
+      cacheName: 'image-cache',
+      plugins: [
+        new workbox.expiration.Plugin({
+          // Cache only 20 images.
+          maxEntries: 20,
+          // Cache for a maximum of a week.
+          maxAgeSeconds: 2 * 24 * 60 * 60,
+        })
+      ],
+    })
+  );
