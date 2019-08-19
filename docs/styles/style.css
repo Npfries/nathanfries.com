@@ -244,7 +244,7 @@ section#portal {
 .portal-text ion-icon {
     color: #99F1E5;
     float: right;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 section#portal h2 {
