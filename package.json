@@ -10,8 +10,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "workbox-build": "^4.3.1"
   }
 }
