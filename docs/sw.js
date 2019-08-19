@@ -7,7 +7,7 @@ if (workbox) {
 }
 
 workbox.routing.registerRoute(
-    /\.js$/,
+    /\.(?:js|html)$/,
     new workbox.strategies.NetworkFirst()
 );
 
@@ -38,3 +38,5 @@ workbox.routing.registerRoute(
       ],
     })
   );
+
+  workbox.googleAnalytics.initialize();
