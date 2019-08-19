@@ -6,9 +6,13 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬. Anyways, thanks for stopping in and looking around!`);
 }
 
+workbox.routing.registerNavigationRoute('/')
+
+workbox.routing.registerNavigationRoute('/index.html')
+
 workbox.routing.registerRoute(
     /\.(?:js|html|css)$/,
-    new workbox.strategies.NetworkFirst()
+    new workbox.strategies.StaleWhileRevalidate()
 );
   
   workbox.routing.registerRoute(

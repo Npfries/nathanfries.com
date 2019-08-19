@@ -7,6 +7,7 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'UA-145820315-1');
     </script>
     <meta charset="UTF-8">
@@ -126,6 +127,15 @@
     <footer>
 
     </footer>
+    <script type="module">
+        import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-window.prod.mjs';
+
+        if ('serviceWorker' in navigator) {
+        const wb = new Workbox('/sw.js');
+
+        wb.register();
+        }
+    </script>
     <script src='/scripts/app.js'></script>
 </body>
 </html>

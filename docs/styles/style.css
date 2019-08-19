@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Kalam';
+    font-display: fallback;
+    src: url('https://fonts.gstatic.com/s/kalam/v10/YA9dr0Wd4kDdMthROCfhsCkA.woff2');
+}
+
 * {
     box-sizing: border-box;
 }
