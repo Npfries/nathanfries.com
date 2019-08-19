@@ -21,6 +21,10 @@ header button {
     font-size: 1.6rem;
 }
 
+button.primary-color {
+    color: #000;
+}
+
 header a {
     color: #000;
 }
@@ -133,7 +137,7 @@ label {
 
 .contact-card input[type='submit'] {
     background-color: #99F1E5;
-    color: #FFF;
+    color: #000;
     width: 100%;
 }
 
