@@ -260,6 +260,10 @@ section#portal p {
     font-size: 1.8rem;
 }
 
+.portal-text table {
+    width: 100%;
+}
+
 section#portal td {
     font-weight: bold;
 }
