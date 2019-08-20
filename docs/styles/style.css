@@ -35,7 +35,7 @@ header a:hover {
 
 main {
     display: grid;
-    grid-template-areas:
+    grid-template-areas: 
         "intro   contact"
         "portal  portal"
         "other   other";
@@ -65,6 +65,7 @@ main {
     }
 
     section#intro {
+        margin-top: 150px;
         height: calc(50vh - 40px) !important;
         padding: 25px !important;
     }
@@ -73,6 +74,7 @@ main {
         height: calc(50vh - 40px) !important;
         padding: 0 !important;
         text-align: center;
+        margin-bottom: 50px; 
     }
 
     .contact-card {

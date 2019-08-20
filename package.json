@@ -13,5 +13,10 @@
   },
   "devDependencies": {
     "workbox-cli": "^4.3.1"
+  },
+  "nodemonConfig": {
+    "ignore": ["docs/sw.js"],
+    "watch": ["docs"],
+    "ext": "png,jpg,webp,js,ico,html,txt,webmanifest,xml,css"
   }
 }
