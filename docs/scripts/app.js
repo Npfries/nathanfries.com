@@ -7,13 +7,16 @@ if ('serviceWorker' in navigator) {
 }
 
 // Get the first script element on the page
-var ref = document.getElementsByTagName( 'script' )[ 0 ];
+var ref = document.getElementsByTagName( 'script' )[ 0 ]
 
 // Create a new script element
-var script = document.createElement( 'script' );
+var script = document.createElement( 'script' )
 
 // Set the script element `src`
-script.src = '//js.hs-scripts.com/6319049.js';
+script.src = '//js.hs-scripts.com/6319049.js'
 
 // Inject the script into the DOM
-ref.parentNode.insertBefore( script, ref );
+
+setTimeout(() => {
+    ref.parentNode.insertBefore( script, ref )
+}, 8000)
