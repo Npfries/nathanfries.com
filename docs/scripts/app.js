@@ -7,10 +7,10 @@ if ('serviceWorker' in navigator) {
 }
 
 // Get the first script element on the page
-var ref = w.document.getElementsByTagName( 'script' )[ 0 ];
+var ref = document.getElementsByTagName( 'script' )[ 0 ];
 
 // Create a new script element
-var script = w.document.createElement( 'script' );
+var script = document.createElement( 'script' );
 
 // Set the script element `src`
 script.src = '//js.hs-scripts.com/6319049.js';
