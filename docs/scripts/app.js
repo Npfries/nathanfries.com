@@ -5,3 +5,5 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js');
     });
 }
+
+document.getElementsByTagName('iframe')[0].setAttribute('title', 'Live Chat')

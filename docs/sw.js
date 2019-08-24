@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/app.js",
-    "revision": "402a1112092c59cdb69b779947dfc731"
+    "revision": "1d7342c654c53eb1376d7266ea96bdb1"
   },
   {
     "url": "site.webmanifest",
