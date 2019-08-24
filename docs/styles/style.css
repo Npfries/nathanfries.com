@@ -33,10 +33,6 @@ header a:hover {
     color: #3de093;
 }
 
-.text-center.m-bottom-2 {
-    display:none !important;
-}
-
 main {
     display: grid;
     grid-template-areas: 
