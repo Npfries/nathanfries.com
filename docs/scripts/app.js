@@ -6,4 +6,14 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-document.getElementsByTagName('iframe')[0].setAttribute('title', 'Live Chat')
+// Get the first script element on the page
+var ref = w.document.getElementsByTagName( 'script' )[ 0 ];
+
+// Create a new script element
+var script = w.document.createElement( 'script' );
+
+// Set the script element `src`
+script.src = '//js.hs-scripts.com/6319049.js';
+
+// Inject the script into the DOM
+ref.parentNode.insertBefore( script, ref );
