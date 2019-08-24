@@ -6,17 +6,13 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Get the first script element on the page
-var ref = document.getElementsByTagName( 'script' )[ 0 ]
-
-// Create a new script element
-var script = document.createElement( 'script' )
-
-// Set the script element `src`
-script.src = '//js.hs-scripts.com/6319049.js'
-
-// Inject the script into the DOM
-
-setTimeout(() => {
-    ref.parentNode.insertBefore( script, ref )
-}, 8000)
+(function(){
+    window['gobot'] = window['gobot'] || function(){(window['gobot'].queue = window['gobot'].queue || []).push(arguments)}
+    var script = document.createElement('script')
+    script.async = 1
+    script.src = 'https://www.getgobot.com/app/v1/gobot-client.js'
+    var insert = document.getElementsByTagName('script')[0]
+    insert.parentNode.insertBefore(script, insert)
+})()
+gobot('create', '-Ln1TbMDDodLjn8qrSs9')
+gobot('pageview')
