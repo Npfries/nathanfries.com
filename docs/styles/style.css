@@ -187,7 +187,7 @@ section#portal {
         "portal-text hand   table"
         "portal-text laptop laptop";
     grid-template-columns: 3fr 2fr 2fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 2fr 3fr;
     grid-gap: 50px;
     max-width: 100vw;
     padding: 50px 25px;
