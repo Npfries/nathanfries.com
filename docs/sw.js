@@ -115,7 +115,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/style.css",
-    "revision": "3c43bc2dd2a8e2d17dbaf909b427ed9c"
+    "revision": "31f0b81ec7d53d93781065435ec82c0b"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
