@@ -5,3 +5,5 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js');
     });
 }
+
+document.getElementsByClassName('m-bottom-2')[1].getElementsByClassName.display = 'none'
