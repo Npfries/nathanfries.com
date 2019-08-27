@@ -42,7 +42,8 @@ main {
     grid-template-areas: 
         "intro   contact"
         "portal  portal"
-        "nativ   nativ"; 
+        "nativ   nativ"
+        "shopriverpark shopriverpark";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
 }
@@ -270,11 +271,64 @@ picture.nativ-img {
     border-radius: 15px;
 }
 
+section#shopriverpark {
+    grid-area: shopriverpark;
+    display: grid;
+    grid-template-areas: 
+        "shopriverpark-text shopriverpark-img";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    background-color: rgb(0,0,0, 0.05);
+    padding: 50px 25px;
+}
+
+.shopriverpark-text {
+    grid-area: shopriverpark-text;
+    background-color: #FFF;
+    border-radius: 25px;
+    padding: 50px;
+}
+
+section#shopriverpark h2 {
+    margin-top: -20;
+    margin-bottom: 20px;
+}
+
+section#shopriverpark p {
+    font-size: 1.8rem;
+}
+
+.shopriverpark-text table {
+    width: 100%;
+}
+
+section#shopriverpark td {
+    font-weight: bold;
+}
+
+picture.shopriverpark-img {
+    grid-area: shopriverpark-img;
+    display: flex;
+}
+
+.shopriverpark-img img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+}
+
 @media screen and (max-width: 800px) {
     section#nativ {
         grid-template-areas:
             "nativ-text"
             "nativ-img";
+        grid-template-columns: 1fr;
+    }
+    section#shopriverpark {
+        grid-template-areas:
+            "shopriverpark-text"
+            "shopriverpark-img";
         grid-template-columns: 1fr;
     }
 }
@@ -334,6 +388,16 @@ picture.nativ-img {
     .nativ-text {
         padding: 20px !important;
     }
+    section#shopriverpark {
+        padding: 15px;
+        grid-gap: 15px;
+    }
+    section#shopriverpark td, tr {
+        font-size: 1rem;
+    }
+    .nativ-shopriverpark {
+        padding: 20px !important;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -351,23 +415,24 @@ picture.nativ-img {
             ".       intro   ."
             ".       contact ."
             "portal  portal  portal"
-            "nativ nativ nativ";
+            "nativ nativ nativ"
+            "shopriverpark shopriverpark shopriverpark";
         grid-template-columns: 25px auto 25px;
         grid-column-gap: 0 !important;
-        grid-row-gap: 100px;
     }
 
     section#intro {
         margin-top: 150px;
         height: calc(50vh - 40px) !important;
         padding: 25px !important;
+        margin-bottom:100px;
     }
 
     section#contact {
         height: calc(50vh - 40px) !important;
         padding: 0 !important;
         text-align: center;
-        margin-bottom: 50px; 
+        margin-bottom: 150px; 
     }
 
     .contact-card {

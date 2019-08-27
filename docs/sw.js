@@ -58,6 +58,10 @@ self.__precacheManifest = [
     "revision": "a3769376de1b387495a55fa85a7599ba"
   },
   {
+    "url": "assets/images/shopriverpark.webp",
+    "revision": "265fae8feab2383173a035dcd2e93234"
+  },
+  {
     "url": "assets/images/workorder-held.jpg",
     "revision": "b9fd9402bcaae7894617f1830170e277"
   },
@@ -91,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f4181fde82633903548f2bebad53eb27"
+    "revision": "1752f97105ee7e93513362ccdc8bff6a"
   },
   {
     "url": "robots.txt",
@@ -119,7 +123,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/style.css",
-    "revision": "72826997f95d752b7f7f6d5b1c2d1f9d"
+    "revision": "01b3ae8d354a767108cb99d3b9e0c4d3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
