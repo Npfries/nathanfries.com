@@ -46,10 +46,6 @@ self.__precacheManifest = [
     "revision": "a742de7e0ac7bd6a32bc2efd3f1d62aa"
   },
   {
-    "url": "assets/images/nativ.jpg",
-    "revision": "b2d371867815f735bf43b17fb3297e5c"
-  },
-  {
     "url": "assets/images/nativ.webp",
     "revision": "fb62199f07e60eb696c07a435348e550"
   },
@@ -60,10 +56,6 @@ self.__precacheManifest = [
   {
     "url": "assets/images/notifications.webp",
     "revision": "a3769376de1b387495a55fa85a7599ba"
-  },
-  {
-    "url": "assets/images/shopriverpark.jpg",
-    "revision": "449e746902c6fe2af9ee98559ef92025"
   },
   {
     "url": "assets/images/shopriverpark.webp",
@@ -84,6 +76,14 @@ self.__precacheManifest = [
   {
     "url": "assets/images/workorder.webp",
     "revision": "c35938ec004dbaf9ec70ad13121d3f44"
+  },
+  {
+    "url": "assets/nativ.jpg",
+    "revision": "b2d371867815f735bf43b17fb3297e5c"
+  },
+  {
+    "url": "assets/shopriverpark.jpg",
+    "revision": "449e746902c6fe2af9ee98559ef92025"
   },
   {
     "url": "components/nf-modal.js",
