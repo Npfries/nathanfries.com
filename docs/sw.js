@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f7983665111cbc5e25dce2a3a253c0cb"
+    "revision": "f320b1a0e08930f84a21ee11c7583995"
   },
   {
     "url": "robots.txt",
@@ -111,7 +111,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/app.js",
-    "revision": "1f62aff42722e3239053fe5789e1e092"
+    "revision": "402a1112092c59cdb69b779947dfc731"
   },
   {
     "url": "site.webmanifest",
