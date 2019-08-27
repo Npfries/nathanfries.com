@@ -324,12 +324,14 @@ picture.shopriverpark-img {
             "nativ-text"
             "nativ-img";
         grid-template-columns: 1fr;
+        grid-template-rows: auto 400px;
     }
     section#shopriverpark {
         grid-template-areas:
             "shopriverpark-text"
             "shopriverpark-img";
         grid-template-columns: 1fr;
+        grid-template-rows: auto 400px;
     }
 }
 
