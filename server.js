@@ -11,7 +11,7 @@ const buildSW = () => {
     return workboxBuild.generateSW({
       globDirectory: 'docs',
       globPatterns: [
-        '**/*.{png,jpg,webp,js,ico,html,txt,webmanifest,xml,css,JPG}',
+        '**/*.{png,jpg,webp,js,ico,html,txt,webmanifest,xml,css}',
       ],
       swDest: 'docs/sw.js',
     });
@@ -22,4 +22,4 @@ app.get('/', (req, res) => {
 })
 
 buildSW()
-app.listen(3000) 
+app.listen(3000)  

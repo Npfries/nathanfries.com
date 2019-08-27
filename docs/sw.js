@@ -46,6 +46,10 @@ self.__precacheManifest = [
     "revision": "a742de7e0ac7bd6a32bc2efd3f1d62aa"
   },
   {
+    "url": "assets/images/nativ.jpg",
+    "revision": "b2d371867815f735bf43b17fb3297e5c"
+  },
+  {
     "url": "assets/images/nativ.webp",
     "revision": "fb62199f07e60eb696c07a435348e550"
   },
