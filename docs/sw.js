@@ -47,7 +47,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/images/nativ.webp",
-    "revision": "f0273388d24dd5e571b4a735bebc6f23"
+    "revision": "fb62199f07e60eb696c07a435348e550"
   },
   {
     "url": "assets/images/notifications.jpg",
@@ -58,8 +58,12 @@ self.__precacheManifest = [
     "revision": "a3769376de1b387495a55fa85a7599ba"
   },
   {
+    "url": "assets/images/shopriverpark.jpg",
+    "revision": "449e746902c6fe2af9ee98559ef92025"
+  },
+  {
     "url": "assets/images/shopriverpark.webp",
-    "revision": "265fae8feab2383173a035dcd2e93234"
+    "revision": "5b3203fe64d97ccbb34c329435c6c8ee"
   },
   {
     "url": "assets/images/workorder-held.jpg",
@@ -95,7 +99,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9fe67f4916c0270ee6094213fdcf62f8"
+    "revision": "8e8a089cca124fdec124de97c22454e3"
   },
   {
     "url": "robots.txt",
