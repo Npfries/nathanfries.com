@@ -99,7 +99,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "64f885b2e4dd7590855fdaeb43172418"
+    "revision": "f7983665111cbc5e25dce2a3a253c0cb"
   },
   {
     "url": "robots.txt",
@@ -127,7 +127,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/style.css",
-    "revision": "a32558edef6c27e18ecb03f1a71fa18d"
+    "revision": "a16d4ab42ccc58f33ec5404446bc5d53"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

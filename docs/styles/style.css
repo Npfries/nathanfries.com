@@ -350,7 +350,7 @@ picture.shopriverpark-img {
     section#portal {
         grid-template-areas:
             "portal-text"
-            "hand"
+            "hand" 
             "table"
             "laptop";
         grid-template-columns: 1fr;
