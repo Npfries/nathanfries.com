@@ -228,7 +228,7 @@ section#nativ {
     grid-area: nativ;
     display: grid;
     grid-template-areas: 
-        "nativ-text nativ-img";
+        "nativ-img nativ-text";
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     background-color: rgb(0,0,0, 0.05);
