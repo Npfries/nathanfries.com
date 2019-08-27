@@ -11,7 +11,7 @@ const buildSW = () => {
     return workboxBuild.generateSW({
       globDirectory: 'docs',
       globPatterns: [
-        '**/*.{png,jpg,webp,js,ico,html,txt,webmanifest,xml,css}',
+        '**/*.{png,jpg,webp,js,ico,html,txt,webmanifest,xml,css,JPG}',
       ],
       swDest: 'docs/sw.js',
     });
