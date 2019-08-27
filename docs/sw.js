@@ -46,6 +46,10 @@ self.__precacheManifest = [
     "revision": "a742de7e0ac7bd6a32bc2efd3f1d62aa"
   },
   {
+    "url": "assets/images/nativ.webp",
+    "revision": "f0273388d24dd5e571b4a735bebc6f23"
+  },
+  {
     "url": "assets/images/notifications.jpg",
     "revision": "ff18511d265341f4a9f8c72c85a25ffb"
   },
@@ -87,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e187aab284b3f51ede4b9f2055321a98"
+    "revision": "f4181fde82633903548f2bebad53eb27"
   },
   {
     "url": "robots.txt",
@@ -115,7 +119,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/style.css",
-    "revision": "31f0b81ec7d53d93781065435ec82c0b"
+    "revision": "72826997f95d752b7f7f6d5b1c2d1f9d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
