@@ -441,3 +441,8 @@ picture.shopriverpark-img {
         width: calc(100vw - 50px) !important;
     }
 }
+
+abbr[title] {
+    text-decoration: none !important;
+    border: none !important;
+}
