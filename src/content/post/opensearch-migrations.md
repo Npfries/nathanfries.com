@@ -1,7 +1,7 @@
 ---
 title: "Opensearch Migrations"
 publishDate: "17 June 2023"
-description: "Another example post for Astro Cactus, this time written in a plain markdown file"
+description: "Leveraging existing libraries to bring migration tooling to Opensearch with Javascript."
 tags: ["opensearch", "devops", "tooling"]
 ---
 
