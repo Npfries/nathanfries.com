@@ -8,8 +8,7 @@ import prefetch from "@astrojs/prefetch";
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://npfries.github.io",
-	base: "/nathanfries.com",
+	site: "https://nathanfries.com",
 	markdown: {
 		shikiConfig: {
 			theme: "dracula",
