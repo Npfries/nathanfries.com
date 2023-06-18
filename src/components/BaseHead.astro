@@ -65,9 +65,12 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <!-- custom -->
 
 <!-- gtag -->
-<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-YDEJ5ZSMTY"
-></script>
-<script type="text/partytown">
+<script
+	type="text/partytown"
+	async
+	defer
+	src="https://www.googletagmanager.com/gtag/js?id=G-YDEJ5ZSMTY"></script>
+<script type="text/partytown" async defer>
 	window.dataLayer = window.dataLayer || [];
 	function gtag() {
 		dataLayer.push(arguments);
