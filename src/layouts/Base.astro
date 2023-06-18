@@ -50,6 +50,14 @@ const {
 			// initailse root class attribute
 			root.classList.toggle("dark", isDark);
 		</script>
+	</head>
+	<body>
+		<SkipLink />
+		<Header />
+		<main id="main" class="flex-1">
+			<slot />
+		</main>
+		<Footer />
 		<!-- Google tag (gtag.js) -->
 		<script defer async src="https://www.googletagmanager.com/gtag/js?id=G-YDEJ5ZSMTY"></script>
 		<script defer>
@@ -61,13 +69,5 @@ const {
 
 			gtag("config", "G-YDEJ5ZSMTY");
 		</script>
-	</head>
-	<body>
-		<SkipLink />
-		<Header />
-		<main id="main" class="flex-1">
-			<slot />
-		</main>
-		<Footer />
 	</body>
 </html>
