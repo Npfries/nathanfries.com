@@ -63,3 +63,15 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 <link rel="alternate" type="application/rss+xml" title={siteConfig.title} href="/rss.xml" />
 
 <!-- custom -->
+
+<!-- gtag -->
+<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-YDEJ5ZSMTY"
+></script>
+<script type="text/partytown">
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag("js", new Date());
+	gtag("config", "GA_MEASUREMENT_ID");
+</script>
