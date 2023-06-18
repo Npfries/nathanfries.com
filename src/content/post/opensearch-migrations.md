@@ -7,7 +7,9 @@ tags: ["opensearch", "devops", "tooling"]
 
 ### Intro
 
-Opensearch provides no functionality for managing the state of a cluster with respect to index templates, index mappings, analyzers, and search templates. In a typical database, we would expect to find some tooling for migrations, usually provided by an ORM. The Opensearch client library does not provide anything of the sort, and ORMs either do not support Opensearch , or do not have migration tooling that supports it.
+Opensearch provides no functionality for managing the state of a cluster with respect to index templates, index mappings, analyzers, and search templates. In a typical database, we would expect to find some tooling for migrations, usually provided by an ORM. The Opensearch client library does not provide anything of the sort, and ORMs either do not support Opensearch, or do not have migration tooling that supports it.
+
+The code for this post can be found at https://github.com/Npfries/opensearch-umzug. It contains a docker-compose.yml file with basic development Opensearch and Opensearch Dashboards containers for testing.
 
 ### Outline
 
@@ -30,7 +32,11 @@ We can leverage this existing tooling and extend it to suit our needs. This will
 ### Implementation
 
 Umzug supports multiple databases out of the box, each implementing the abstract `UmzugStorage` class. This class is exposed by the framework, and can be provided to the Umzug constructor as the `customStorage` property on the configuration.
-We can create our own `OpensearchStorage` that implements `UmzugStorage`. Implementations of `UmzugStorage` must implement three methods: - `executed()` - this should return a list of executed migrations. - `logMigration()` - this should log the migration. - `unlogMigration()` - this should unlog the migration.
+We can create our own `OpensearchStorage` that implements `UmzugStorage`. Implementations of `UmzugStorage` must implement three methods:
+
+- `executed()` - this should return a list of executed migrations.
+- `logMigration()` - this should log the migration.
+- `unlogMigration()` - this should unlog the migration.
 
 ```javascript
 // OpensearchStorage.js
@@ -173,11 +179,10 @@ We can put it all together and have a complete implementation of the `UmzugStora
 
 ```javascript
 // OpensearchStorage.js
-import { UmzugStorage } from "umzug";
 import { OpensearchClient } from "./OpensearchClient.js";
 
-class OpensearchStorage implements UmzugStorage {
-	client: OpensearchClient;
+class OpensearchStorage {
+	client;
 
 	constructor() {
 		this.client = new OpensearchClient();
@@ -191,7 +196,7 @@ class OpensearchStorage implements UmzugStorage {
 			return [];
 		}
 
-		const respose = await this.client.search({
+		const response = await this.client.search({
 			index: "migrations",
 			body: {
 				query: {
@@ -253,7 +258,7 @@ const client = new OpensearchClient()
 
 const umzug = new Umzug({
   migrations: {
-    glob: 'migrations/**/*.js'
+    glob: 'migrations/**/*.cjs'
   },
   logger: console,
   context: client,
@@ -267,7 +272,7 @@ Let's name this file `migrate.js`. Umzug provides a helpful `runAsCLI()` helper 
 Let's go ahead and create our first migration. Umzug expects two exports for each migration: an up step, and a down step. As was mentioned above, we will be using the Opensearch client for both the migration tooling, as well as for the migrations themselves.
 
 ```javascript
-// [date]_[name].js
+// [date]_[name].cjs
 module.exports = {
 	async up({ context: client }) {
 		await client.indices.create({
