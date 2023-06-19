@@ -1,5 +1,5 @@
 ---
-title: "Opensearch Migrations"
+title: "Opensearch Migrations for Node.js Applications"
 publishDate: "17 June 2023"
 description: "Leveraging existing libraries to bring migration tooling to Opensearch with Javascript."
 tags: ["opensearch", "devops", "tooling"]
