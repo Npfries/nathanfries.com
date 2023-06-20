@@ -55,7 +55,7 @@ PUT my_index
 
 Elasticsearch and Opensearch use what they call Query DSL. It is a JSON-like syntax, with syntactic sugar for defining the REST methods and endpoints. In this example, maintainers might expect to use this within the Dev Tools of either Opensearch Dashboards or Kibana. Without migrations, where would this be tracked, versioned, or code review? Perhaps we have a DBA that that runs stored commands in our repository, perhaps we have this formatted as a cURL command in a bash script we can run against the host, or perhaps some other solution.
 
-There is no reason we could not adopt patterns from other database tooling, and implement migrations ourselves if our current tooling does not support it. [In another post,](https://nathanfries.com/posts/opensearch-migrations) I go. through the process of implementing a migration CLI for consuming migrations written in Javascript using the Opensearch client library, however this could be extended to support migrations written in Query DSL.
+There is no reason we could not adopt patterns from other database tooling, and implement migrations ourselves if our current tooling does not support it. [In another post,](https://nathanfries.com/posts/opensearch-migrations) I go through the process of implementing a migration CLI for consuming migrations written in Javascript using the Opensearch client library, however this could be extended to support migrations written in Query DSL.
 
 Once we have some rudimentary migration tooling in place, we can execute migrations with commands as simple as `migrate up` or `migrate down` in order for our environments to be configured or torn down, respectively.
 
