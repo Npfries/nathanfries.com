@@ -8,16 +8,18 @@ interface Props extends IElement {
 	withDesc?: boolean;
 }
 
-const { post, as: Element = "div", withDesc = false } = Astro.props;
+const { post, as: Element = "div", withDesc = true } = Astro.props;
 const date = new Date(post.data.publishDate);
 const datetime = date.toISOString();
 const postDate = getFormattedDate(date);
 ---
 
 <time datetime={datetime} class="min-w-[120px] text-gray-500">{postDate}</time>
-<Element>
-	<a href={`/posts/${post.slug}/`} class="cactus-link" rel="prefetch">
-		{post.data.title}
-	</a>
-</Element>
-{withDesc && <q class="line-clamp-3 block italic">{post.data.description}</q>}
+<div>
+	<Element class="mb-3">
+		<a href={`/posts/${post.slug}/`} class="cactus-link" rel="prefetch">
+			{post.data.title}
+		</a>
+	</Element>
+	{withDesc && <q class="mb-5 line-clamp-3 italic">{post.data.description}</q>}
+</div>
