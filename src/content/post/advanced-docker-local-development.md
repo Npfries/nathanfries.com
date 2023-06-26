@@ -10,13 +10,15 @@ tags: ["docker", "development", "tooling"]
 Often, Docker is suggested for local development to simplify dependency management, provide isolation and reproducibility, and simplify architecture differences between environments. Most examples do not go into detail about how Docker can be introduced without significantly impacting workflow. Various blogs and YouTube channels make it seem as though simply adding a 5-6 line long Dockerfile and running `docker run ...` will satisfy most requirements. That is far from the case, and Docker, if introduced improperly, will cause more headaches than problems it solves.
 
 Dependencies for this project:
+
 - Docker
 - Node
 - [https://github.com/Npfries/advanced-docker-local-development.git](https://github.com/Npfries/advanced-docker-local-development.git)
 
-For this post, I will frequently referring to [the repository](https://github.com/Npfries/advanced-docker-local-development) containing a "basic" configuration that does actually solve some of the problems that I have encountered trying to implement Docker into my local development workflow for existing projects. 
+For this post, I will frequently referring to [the repository](https://github.com/Npfries/advanced-docker-local-development) containing a "basic" configuration that does actually solve some of the problems that I have encountered trying to implement Docker into my local development workflow for existing projects.
 
 The project largely consists of two Docker services
+
 ```
 version: "3.9"
 
@@ -63,11 +65,12 @@ services:
       retries: 55
 
 ```
-It also contains a Dockerfile at the root of the project from which my_service will be built, with the source code contained in src/. It is a Node based project, and the package.json file contains helper scripts for executing some of the longer docker commands needed. 
+
+It also contains a Dockerfile at the root of the project from which my_service will be built, with the source code contained in src/. It is a Node based project, and the package.json file contains helper scripts for executing some of the longer docker commands needed.
 
 ## Overview
 
-The main application, my_service, is a simple Express server, with only two endpoints: a health check, and an endpoint at `/` that checks that we can connect to the database for no reason in particular other than to prove it works. 
+The main application, my_service, is a simple Express server, with only two endpoints: a health check, and an endpoint at `/` that checks that we can connect to the database for no reason in particular other than to prove it works.
 
 ```
 import express from "express";
@@ -239,7 +242,10 @@ Note that each stage inherits from `base`. That step is common between all of th
 
 The various entrypoints are generally the application start scripts, along with anything that would normally need to happen. If you were deploying this node app outside of a container, you might run some migrations on a database based on a schema in your ORM, tied to your application deployment. I tried to demonstrate that here, despite the application not actually utilizing any imaginary data in the database, but wanted to show how it might work.
 
+_Note: If you want to see a more complete example using Next.js and multiple deployment options, you might want to check out my follow-up article: [Docker for Next.js and Beyond with Hot-Swappable Containers](https://nathanfries.com/posts/docker-e2e-nextjs/)_
+
 entrypoint-dev.sh:
+
 ```
 #!/bin/sh
 
@@ -249,6 +255,7 @@ npm run dev
 ```
 
 entrypoint-start.sh:
+
 ```
 #!/bin/sh
 
@@ -258,6 +265,7 @@ npm run start
 ```
 
 entrypoint-prod.sh:
+
 ```
 #!/bin/sh
 
@@ -270,6 +278,6 @@ npm run start
 
 I actually quite like this setup. It might be a little enterprise-y, but I feel that it is quite clear what is happening once you have a decent understanding of Docker, and how different use-cases can be approached without too much duplication of configuration or scripts.
 
-I plan to expand on this in order to demonstrate how tooling for larger organizations could utilize these patterns in internal tooling, in order to orchestrate a a large and complex environment in a future post. 
+I plan to expand on this in order to demonstrate how tooling for larger organizations could utilize these patterns in internal tooling, in order to orchestrate a a large and complex environment in a future post.
 
 If you hated this and want to let me know, or if you have any questions, please email me at me@nathanfries.com.
