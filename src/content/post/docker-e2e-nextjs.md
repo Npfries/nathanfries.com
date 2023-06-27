@@ -71,7 +71,7 @@ This also carries some downside:
 
 - Changes to the source code require the image to be rebuilt, or a development server to run on the host (this is not always possible in complex projects, such as when the container expects to be within the Docker network or served by a reverse proxy).
 
-There is no good reason that each method can be supported, and even selectively utilized on a per-container basis. This is a best-of-both-worlds scenario where containers can be toggled from three different "modes" in this project: "dev", "start_local", and "start_latest". Defining each "mode":
+There is no good reason that each method can not be supported, and even selectively utilized on a per-container basis. This is a best-of-both-worlds scenario where containers can be toggled from three different "modes" in this project: "dev", "start_local", and "start_latest". Defining each "mode":
 
 - "start_latest": The latest image is pulled from the image repository, with an entrypoint of "next start"
 - "start_local": The image for the app is built from source, with an entrypoint of "next start"
