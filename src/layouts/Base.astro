@@ -17,18 +17,6 @@ const {
 
 <html lang={siteConfig.lang}>
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YDEJ5ZSMTY"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				// eslint-disable-next-line no-undef
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-YDEJ5ZSMTY");
-		</script>
 		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
 		<script define:vars={{ siteConfig }}>
 			const root = document.documentElement;
