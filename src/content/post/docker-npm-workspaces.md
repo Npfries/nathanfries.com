@@ -1,5 +1,5 @@
 ---
-title: "Using npm workspaces with Docker"
+title: "Using npm Workspaces with Docker"
 publishDate: "19 July 2023"
 description: "Demonstrating a solution for using npm workspaces with Docker."
 tags: ["docker", "npm workspaces", "monorepo", "node.js"]
