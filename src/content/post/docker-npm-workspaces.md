@@ -67,9 +67,9 @@ To understand why, and how to prevent this, lets take a look at how npm workspac
 
 npm workspaces is a built-in tool set for creating monorepos. Applications within the monorepo each have their own package.json, with their own dependencies, scripts, and other configurations specified per-project. The root of the monorepo also has a `package.json` file, and it gets a special property: `workspaces`. This is an array containing the paths to each application within this monorepo.
 
-An application or library that is specified as a workspace is treated a little differently than a normal npm project. The biggest difference is that running `npm install` (and some other related commands) does not create a `node_modules` folder within the application directory, and it does not generate a `package-lock.json` file at that location either. Instead, both `node_modules` and `package-lock.json` are placed at the root of the monorepo. This way, shared dependencies between applications in the monorepo are installed once and shared to the projects.
+An application or library that is specified as a workspace is treated a little differently than a normal npm project. The biggest difference is that running `npm install` (and some other related commands) does not create a `node_modules` folder within the application directory, and it does not generate a `package-lock.json` file at that location either. Instead, both `node_modules` and `package-lock.json` are placed at the root of the monorepo. This way, shared dependencies between applications in the monorepo are installed once and shared with the projects.
 
-Knowing this, the above error makes sense. There is no package.json in th application directories where the Dockerfile is.
+Knowing this, the above error makes sense. There is no package-lock.json in the application directories where the Dockerfile is.
 
 ## Solution
 
